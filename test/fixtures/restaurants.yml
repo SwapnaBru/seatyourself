@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_open: 1
+  time_close: 1
+  name: MyString
+  address: MyString
+  city: MyString
+  postal_code: MyString
+  image: MyString
+  user_id: 1
+  cuisine_id: 1
+  capacity: 1
+  price_range: 1
+
+two:
+  time_open: 1
+  time_close: 1
+  name: MyString
+  address: MyString
+  city: MyString
+  postal_code: MyString
+  image: MyString
+  user_id: 1
+  cuisine_id: 1
+  capacity: 1
+  price_range: 1
