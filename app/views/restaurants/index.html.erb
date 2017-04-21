@@ -1,6 +1,11 @@
 
 
 
-<% @restaurants.each do |current_restaurant|%>
-<%= current_restaurant.name%><br />
-<%end%>
+
+  <% @restaurants.each do |restaurant|%>
+    <ul>
+      <li>
+        <%= link_to "#{restaurant.name}", "/restaurants/#{restaurant.id}" %>
+      </li>
+    </ul>
+  <%end%>
