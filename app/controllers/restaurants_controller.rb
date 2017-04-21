@@ -1,6 +1,14 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.all
+
+    if params[:restaurant_name] or params[:restaurant_city]
+      @restaurants = []
+      @restaurants << Restaurant.find_by(name: params[:restaurant_name])
+
+    else
+      @restaurants = Restaurant.all
+    end
+
   end
 
   def show

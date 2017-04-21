@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Restaurants</h1>
 
 <!-- <% @restaurants = Restaurant.all %> -->
@@ -6,3 +7,10 @@
 <%= render 'restaurant', restaurant: restaurant %>
 
   <% end %>
+=======
+<h1>Restaurants#index</h1>
+
+<% @restaurants.each do |current_restaurant|%>
+<%= current_restaurant.name%><br />
+<%end%>
+>>>>>>> 5538de549def0c7344fc8f32a973ef4376cecf2b
