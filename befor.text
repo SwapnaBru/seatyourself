@@ -1,0 +1,24 @@
+          Prefix Verb   URI Pattern                      Controller#Action
+            root GET    /                                home#index
+      home_index GET    /home/index(.:format)            home#index
+       new_users GET    /users/new(.:format)             users#new
+           users POST   /users(.:format)                 users#create
+    reservations GET    /reservations(.:format)          reservations#index
+                 POST   /reservations(.:format)          reservations#create
+ new_reservation GET    /reservations/new(.:format)      reservations#new
+edit_reservation GET    /reservations/:id/edit(.:format) reservations#edit
+     reservation GET    /reservations/:id(.:format)      reservations#show
+                 PATCH  /reservations/:id(.:format)      reservations#update
+                 PUT    /reservations/:id(.:format)      reservations#update
+                 DELETE /reservations/:id(.:format)      reservations#destroy
+     restaurants GET    /restaurants(.:format)           restaurants#index
+                 POST   /restaurants(.:format)           restaurants#create
+  new_restaurant GET    /restaurants/new(.:format)       restaurants#new
+ edit_restaurant GET    /restaurants/:id/edit(.:format)  restaurants#edit
+      restaurant GET    /restaurants/:id(.:format)       restaurants#show
+                 PATCH  /restaurants/:id(.:format)       restaurants#update
+                 PUT    /restaurants/:id(.:format)       restaurants#update
+                 DELETE /restaurants/:id(.:format)       restaurants#destroy
+        sessions POST   /sessions(.:format)              sessions#create
+     new_session GET    /sessions/new(.:format)          sessions#new
+         session DELETE /sessions/:id(.:format)          sessions#destroy

@@ -1,0 +1,10 @@
+<%= link_to 'Sign up', new_user_url %>
+<%= link_to 'Sign in', new_session_url %>
+
+<%= form_tag restaurants_url, method: 'get' do%>
+
+  <%= text_field_tag :name, params[:name], placeholder: "name"%>
+  <%= text_field_tag :city, params[:city], placeholder: "city"%>
+
+<%= submit_tag 'Find'%>
+<%end%>
