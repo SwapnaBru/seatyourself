@@ -6,8 +6,9 @@ class RestaurantsController < ApplicationController
       # @restaurants = []
       # @restaurants << Restaurant.find_by(name: params[:restaurant_name])
     else
-      
+
     end
+
   end
 
   def show
