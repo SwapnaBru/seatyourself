@@ -1,11 +1,12 @@
 class RestaurantsController < ApplicationController
-  def index
-    if params[:restaurant_name] or params[:restaurant_city]
-      @restaurants = []
-      @restaurants << Restaurant.find_by(name: params[:restaurant_name])
 
+  def index
+    if params[:restaurant_name]
+      @restaurants = Restaurant.where("name LIKE ?","%#{params[:restaurant_name]}%")
+      # @restaurants = []
+      # @restaurants << Restaurant.find_by(name: params[:restaurant_name])
     else
-      @restaurants = Restaurant.all
+      
     end
   end
 
