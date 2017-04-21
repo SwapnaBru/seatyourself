@@ -42,6 +42,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+<<<<<<< HEAD
 
 
+=======
+  gem 'awesome_print'
+>>>>>>> b7a19872b2f4170babc2a0844c8c5c7dccedf50a
 end
