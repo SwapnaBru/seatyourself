@@ -6,8 +6,8 @@
 <div class="search">
 <%= form_tag restaurants_url, method: 'get' do%>
 
-  <%= text_field_tag :restaurant_name, params[:restaurant_name]%>
-  <%= text_field_tag :restaurant_city, params[:restaurant_city]%>
+  <%= text_field_tag :restaurant_name, params[:restaurant_name], placeholder: 'name'%>
+  <%= text_field_tag :restaurant_city, params[:restaurant_city], placeholder: 'city'%>
 
 <%= submit_tag 'Find'%>
 </div>
