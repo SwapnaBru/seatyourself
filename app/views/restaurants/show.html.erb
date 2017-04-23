@@ -7,6 +7,7 @@ Price: <%= @restaurant.price_range %> <br />
 Time Open: <%= @restaurant.time_open %> <br />
 Time Close: <%= @restaurant.time_close %> <br />
 Cuisine: <%= @restaurant.cuisine.name %> <br />
+Description: <%= @restaurant.description %> <br />
 
 <%= form_for([@restaurant, @reservation]) do |f| %>
   <% if @reservation.errors.any? %>
