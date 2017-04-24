@@ -13,7 +13,17 @@ class ReservationsController < ApplicationController
   end
 
   def edit
+    @reservation = Reservation.find(params[:id])
   end
+
+  def update
+    @reservation = Reservation.find(params[:id])
+    if @reservation.update(reservation_params)
+       redirect_to restaurant_reservation_url
+     else
+       render 'edit'
+     end
+   end
 
   def create
     @reservation = @restaurant.reservations.build(reservation_params)
