@@ -1,5 +1,26 @@
 
-<h5>Reservation made successfully!</h5>
+<h3>Reservation made successfully!</h3>
+
+<h5>Here are your reservation details:</h5>
+
+<%= form_for([@restaurant, @reservation]) do |f| %>
+
+    <div class="field">
+      <%= f.label :date%><br />
+      <%= f.date_field :date %>
+    </div>
+    <div class="field">
+      <%= f.label :time%><br />
+      <%= f.number_field :time %>
+    </div>
+    <div class="field">
+      <%= f.label :seats %><br />
+      <%= f.number_field :seats %>
+    </div>
+  <% end %>
+  <br>
 
 
 <%= link_to 'Edit your reservation', edit_restaurant_reservation_url(@restaurant, @reservation)%>
+
+<%= link_to 'Delete', restaurant_reservation_path(@restaurant, @reservation), method: :delete, data: {confirm: "Are you sure you want to delete your reservation? This cannot be undone!"} %>

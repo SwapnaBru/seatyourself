@@ -25,12 +25,17 @@ class ReservationsController < ApplicationController
      end
    end
 
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to root_path
+  end
+
   def create
     @reservation = @restaurant.reservations.build(reservation_params)
     if @reservation.save
       render 'reservations/show'
     else
-      # flash[:alert] = " Sorry, there are not enough seats availabe at the moment."
       render 'restaurants/show'
     end
   end
