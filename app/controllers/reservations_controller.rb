@@ -27,13 +27,11 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = @restaurant.reservations.build(reservation_params)
-    if ((params[:reservation][:seats]).to_i > @restaurant.availability) && (@restaurant.availability < 0)
-
-      flash[:alert] = " Sorry, there are not enough seats availabe at the moment."
-      render 'restaurants/show'
-    else
-      @restaurant.save
+    if @reservation.save
       render 'reservations/show'
+    else
+      # flash[:alert] = " Sorry, there are not enough seats availabe at the moment."
+      render 'restaurants/show'
     end
   end
 
