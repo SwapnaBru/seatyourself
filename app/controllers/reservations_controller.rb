@@ -25,6 +25,12 @@ class ReservationsController < ApplicationController
      end
    end
 
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to root_path
+  end
+
   def create
     @reservation = @restaurant.reservations.build(reservation_params)
     if @reservation.save
