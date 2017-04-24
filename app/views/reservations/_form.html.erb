@@ -1,0 +1,39 @@
+<%= link_to 'TEST', edit_restaurant_reservation_url %>
+
+Name: <%= @restaurant.name %> <br />
+City: <%= @restaurant.city %> <br />
+Address <%= @restaurant.address %> <br />
+Price: <%= @restaurant.price_range %> <br />
+Time Open: <%= @restaurant.time_open %> <br />
+Time Close: <%= @restaurant.time_close %> <br />
+Cuisine: <%= @restaurant.cuisine.name %> <br />
+Description: <%= @restaurant.description %> <br />
+
+<%= form_for([@restaurant, @reservation]) do |f| %>
+  <% if @reservation.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+        <ul>
+          <% @reservation.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :date%><br />
+      <%= f.date_field :date %>
+    </div>
+    <div class="field">
+      <%= f.label :time%><br />
+      <%= f.number_field :time %>
+    </div>
+    <div class="field">
+      <%= f.label :seats %><br />
+      <%= f.number_field :seats %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Book' %>
+    </div>
+  <% end %>

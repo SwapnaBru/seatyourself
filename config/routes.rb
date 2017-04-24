@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :restaurants do
-    resources :reservations, only: [:show, :create, :destroy]
+    resources :reservations, only: [:show, :create, :destroy, :edit, :update]
   end
   resources :users, only: [:new, :create]
   resources :reservations
