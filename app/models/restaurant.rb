@@ -11,8 +11,8 @@ class Restaurant < ApplicationRecord
 
   # private
 
-  def total_seats_reserved(time)
-    reserved = self.reservations.where(time: time)
+  def total_seats_reserved(time, date)
+    reserved = self.reservations.where(time: time, date: date)
     sum = 0
     reserved.each do |reserve|
       sum += reserve.seats
@@ -20,8 +20,8 @@ class Restaurant < ApplicationRecord
     return sum
   end
 
-  def availability(time)
-    seats_taken = self.total_seats_reserved(time)
+  def availability(time, date)
+    seats_taken = self.total_seats_reserved(time, date)
     @seats_available = self.capacity - seats_taken
   end
 

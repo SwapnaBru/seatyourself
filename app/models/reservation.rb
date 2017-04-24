@@ -8,7 +8,7 @@ class Reservation < ApplicationRecord
    private
 
   def seats_less_than_availability
-      available = self.restaurant.availability(time)
+      available = self.restaurant.availability(time, date)
     if seats > available
        errors.add(:seats, "are more than restaurant's availibility")
      end
