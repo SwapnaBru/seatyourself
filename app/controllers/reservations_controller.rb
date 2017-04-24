@@ -30,7 +30,6 @@ class ReservationsController < ApplicationController
     if @reservation.save
       render 'reservations/show'
     else
-      # flash[:alert] = " Sorry, there are not enough seats availabe at the moment."
       render 'restaurants/show'
     end
   end
