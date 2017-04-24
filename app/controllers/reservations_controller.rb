@@ -5,7 +5,7 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    @review = Review.find(params[:id])
+    @reservation = Reservation.find(params[:id])
   end
 
   def new
@@ -17,13 +17,15 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = @restaurant.reservations.build(reservation_params)
-      # @review.user = current_user
-      if @reservation.save
-        render 'reservations/show'
-      else
-        render 'restaurants/show'
-      end
+    if ((params[:reservation][:seats]).to_i > @restaurant.availability) && (@restaurant.availability < 0)
+
+      flash[:alert] = " Sorry, there are not enough seats availabe at the moment."
+      render 'restaurants/show'
+    else
+      @restaurant.save
+      render 'reservations/show'
     end
+  end
 
   private
   def reservation_params

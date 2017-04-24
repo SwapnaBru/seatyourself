@@ -9,4 +9,17 @@ class Restaurant < ApplicationRecord
 
   validates :price_range, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
 
+  def total_seats_reserved
+    sum = 0
+    self.reservations.each do |reserve|
+      sum += reserve.seats
+    end
+    return sum
+  end
+
+  def availability
+    seats_taken = self.total_seats_reserved
+    @seats_available = self.capacity - seats_taken
+  end
+
 end
