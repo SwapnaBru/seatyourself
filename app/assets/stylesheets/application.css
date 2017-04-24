@@ -15,12 +15,20 @@
  */
 
 html {
-  background-color: grey;
+  background-color: white;
+  font-family: 'Hind', sans-serif;
 }
 
 .main_title {
   font-size: 50px;
+  text-align: center;
+  color: white;
+  margin: 4px 0 4px 0;
 }
+.nav{
+  background-color: rgb(255, 104, 104);
+  overflow: hidden; }
+
 
 .sign {
   float: right;
@@ -28,8 +36,6 @@ html {
   font-family: sans-serif;
 
 }
-
-
 
 .search {
   text-align: center;

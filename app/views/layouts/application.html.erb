@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Hind|Noto+Serif|Oxygen" rel="stylesheet">
   <title>Seatyourself</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <h1 class="main_title">SEAT YOURSELF</h1>
+  <header class="bar-top">
+    <nav class="nav">
+    <h1 class="main_title">Seat Yourself</h1>
+      </nav>
   </header>
   <% if flash[:notice] %>
     <p id="notice"><%= flash[:notice] %></p>
