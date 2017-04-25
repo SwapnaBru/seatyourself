@@ -55,7 +55,9 @@ footer {
   background-color: rgb(255, 104, 104);
   overflow: hidden; }
 
-
+img {
+  width: 100%;
+}
 
  .container {
   width: 80%;
