@@ -18,13 +18,15 @@
 
 <%= yield %>
 
-<p class="userinfo">
+<div class="userinfo">
     <% if current_user %>
       Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
     <% else %>
       <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
     <% end %>
-</p>
-<footer>Copyright © 2017</footer>
+
+  <footer>Copyright © 2017</footer>
+</div>
+
 </body>
 </html>

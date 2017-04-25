@@ -38,10 +38,7 @@
 }
 footer {
   text-align: center;
-  background-color: rgb(170, 170, 170);
-  padding: 50px;
   color: white;
-  position: fixed;
   width: 100%;
 
 }
@@ -63,7 +60,7 @@ img {
   width: 80%;
   margin: 0 auto; }
 
-  p.userinfo {
+  .userinfo {
       text-align: center;
       padding: 20px;
   }
