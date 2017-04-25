@@ -19,13 +19,16 @@
    box-sizing: border-box;
  }
  html {
-   background-color:rgb(140, 140, 140);
+   /*background-color:rgb(140, 140, 140);*/
  }
 
  /*.main_title {
   font-size: 50px;
  }*/
-
+.field {
+  border: 4px;
+  border-color: blue;
+}
  h1 {
   font-size: 2.25rem;
   /* 14 x 3 = 42? */
