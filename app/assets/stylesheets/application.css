@@ -13,41 +13,63 @@
  *= require_tree .
  *= require_self
  */
-
-html {
-  background-color: white;
-  font-family: 'Hind', sans-serif;
-}
-
-.main_title {
-  font-size: 40px;
-  text-align: center;
-  color: white;
-  margin: 4px 0 4px 0;
-}
-.nav{
-  background-color: rgb(255, 104, 104);
-  overflow: hidden;
-  /*position: fixed;*/
-  width: 980 px;
-
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ html {
+   background-color:white;
  }
 
+ /*.main_title {
+  font-size: 50px;
+ }*/
 
-.sign {
-  float: right;
-  font-size: 20px;
-  font-family: sans-serif;
-  position: static;
-  margin-left: 800px;
-  margin-top: -47px;
-  margin-bottom: 17px;
-border-bottom-width: 18px;
-bottom: 584px;
-
-}
-
-.search {
+ h1 {
+  font-size: 2.25rem;
+  /* 14 x 3 = 42? */
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  /*margin-bottom: 0.5em;*/
+  line-height: 1.25em;
+  text-transform: uppercase;
   text-align: center;
-  margin: 80px;
+
 }
+footer {
+  text-align: center;
+  background-color: rgb(170, 170, 170);
+  padding: 50px;
+  color: white;
+  position: fixed;
+  width: 100%;
+
+}
+
+ .sign {
+   float: right;
+   font-size: 20px;
+  font-family: sans-serif;
+ }
+ .nav {
+  background-color: rgb(255, 104, 104);
+  overflow: hidden; }
+
+ .container {
+  width: 80%;
+  margin: 0 auto; }
+
+  p.userinfo {
+      text-align: center;
+      padding: 20px;
+  }
+  form
+  {
+    text-align: center;
+  }
+
+ .search {
+  text-align: center;
+   margin: 80px;
+
+ }
