@@ -3,13 +3,13 @@ class RestaurantsController < ApplicationController
   def index
     if (params[:restaurant_name] != "") and (params[:restaurant_city] != "")
       @restaurants = Restaurant.where("name LIKE ? AND city LIKE ?","%#{params[:restaurant_name]}%", "%#{params[:restaurant_city]}%")
-      if @restaurants = []
-        @restaurants = Restaurant.all
-        flash[:notice] = "Sorry, we did not find results matching your search. Here is a list of all the restaurants in #{params[:restaurant_city]}."
-      end
+        if @restaurants.count == 0
+          @restaurants = Restaurant.all
+          flash[:notice] = "Sorry, we did not find results matching your search. Here is a list of all the restaurants in Toronto."
+        end
     else
-      render 'home/index'
       flash[:alert] = "Please enter valid inputs"
+       render 'home/index'
     end
 
   end

@@ -1,4 +1,5 @@
 
+<%=flash[:alert]%>
 <br>
 <div class="search">
 <%= form_tag restaurants_url, method: 'get' do%>
@@ -7,5 +8,5 @@
   <%= text_field_tag :restaurant_city, params[:restaurant_city], placeholder: 'city'%>
 
 <%= submit_tag 'Find'%>
-</div>
 <%end%>
+</div>
