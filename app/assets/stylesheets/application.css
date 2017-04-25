@@ -21,10 +21,13 @@
  html {
    /*background-color:rgb(140, 140, 140);*/
  }
-
+header{
+  line-height: 0;
+}
  /*.main_title {
   font-size: 50px;
  }*/
+
 .field {
   border: 4px;
   border-color: blue;
@@ -52,7 +55,7 @@ footer {
   font-family: sans-serif;
  }
  .nav {
-  background-color: rgb(255, 104, 104);
+  background-color: rgba(238, 8, 8, 0.52);
   overflow: hidden; }
 
 img {
@@ -65,7 +68,7 @@ img {
 
   .userinfo {
       text-align: center;
-      padding: 20px;
+      /*padding: 20px;*/
   }
 
 input{
