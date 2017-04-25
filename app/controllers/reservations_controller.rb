@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :load_restaurant
+  before_action :ensure_logged_in
 
   def index
   end
