@@ -55,6 +55,8 @@ footer {
   background-color: rgb(255, 104, 104);
   overflow: hidden; }
 
+
+
  .container {
   width: 80%;
   margin: 0 auto; }
@@ -63,6 +65,11 @@ footer {
       text-align: center;
       padding: 20px;
   }
+
+input{
+
+  border: 10px;
+}
   form
   {
     text-align: center;
